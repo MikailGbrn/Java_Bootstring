@@ -1,0 +1,44 @@
+--- Sesi 5 ----
+
+==== Inheritence ====
+
+Membuat bangun datar menggunakan inheritence dengan data-data sebagai berikut:
+1. BangunDatar.java sebagai class induk
+2. Lingkaran.java extends ke BangunDatar.java
+3. Persegi.java extends ke BangunDatar.java
+4. Persegipanjang.java extends ke BangunDatar.java
+5. Segitiga.java extends ke BangunDatar.java
+6. Lingkaran.java extends ke BangunDatar.java
+
+Cara Menggunakan:
+1. Membuat method luas di BangunDatar.java
+2. membuat overriding method luas di setiap file bangun datar (persegi, persegi panjang dll)
+3.  Membuat method keliling di BangunDatar.java
+4. membuat overriding method keliling di setiap file bangun datar (persegi, persegi panjang dll)
+5. memanggil setiap method di dalam main class
+
+==== Encapsulation ====
+
+Membuat sisten menu makanan sebuah restoran dengan data sebagai berikut:
+1. harga makanan
+2. jenis makanan
+3. diskon
+
+Cara menggunakan:
+1. membuat Restoran.java
+2. mendeklarasikan setter dan getter untuk menu, makanan, dan diskon
+3. melakukan set data di dalam makanan.java
+4. memanggil data yang sudah di set di dalam makanan.java
+
+==== Polymorphism ====
+
+Membuat overriding dan overloading file dengan data sebagai berikut:
+1. manusia terdiri dari 2 jenis, pria dan wanita
+2. pria bernyanyi dengan nada na na na
+3. wanita bernyanyi dengan nada la la la
+
+cara menggunakan:
+1. membuat class induk Manusia dengan method bernyanyi
+2. membuat class pria dengan method bernyanyi
+3. membuat class wanita dengan method bernyanyi
+4. memanggil method tersebut di dalam class main
