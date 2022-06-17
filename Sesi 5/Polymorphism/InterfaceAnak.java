@@ -1,3 +1,4 @@
-public class InterfaceAnak {
+public interface InterfaceAnak {
+    void menyapa();
     
 }

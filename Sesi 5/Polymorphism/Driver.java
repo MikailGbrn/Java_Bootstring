@@ -3,7 +3,10 @@ public class Driver {
         AnakUmur1Tahun anak = new AnakUmur1Tahun();
         anak.makan();
 
-        // Induk ibu = new AnakUmur1Tahun();
-        // ibu.menyapa();
+        Induk ibu = new AnakUmur1Tahun();
+        ibu.minum();
+
+        InterfaceAnak ayah = new AnakUmur1Tahun();
+        ayah.menyapa();
     }
 }
