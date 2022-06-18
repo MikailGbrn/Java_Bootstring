@@ -1,7 +1,7 @@
 package com.learning.thread;
 
 public class ThreadNumber extends Thread {
-    private NumberGenerator ng;
+    private final NumberGenerator ng;
 
     public ThreadNumber(NumberGenerator ng) {
         this.ng = ng;
@@ -13,10 +13,10 @@ public class ThreadNumber extends Thread {
     }
 
     private void callGenerator() {
-        synchronized (ng){
-        for (int i = 0; i < 3; i++) {
-            System.out.println(getName() + " " + ng.randomNumber());
+        synchronized (ng) {
+            for (int i = 0; i < 3; i++) {
+                System.out.println(getName() + " " + ng.randomNumber());
+            }
         }
-    }
     }
 }
