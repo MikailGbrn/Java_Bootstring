@@ -8,14 +8,14 @@ public class ThreadHelloTest extends Thread{
 
 	}
 
-	@Test
-	public void testRun() {
-		for (int i = 0; i < 5; i++) {
-			ThreadHello instance = new ThreadHello(String.valueOf(i));
-			Thread t = new Thread(instance);
-			t.start();
-		}
-	}
+	// @Test
+	// public void testRun() {
+	// 	for (int i = 0; i < 5; i++) {
+	// 		ThreadHello instance = new ThreadHello(String.valueOf(i));
+	// 		Thread t = new Thread(instance);
+	// 		t.start();
+	// 	}
+	// }
 
 	// @Test
 	// public void testRun() {
@@ -26,4 +26,11 @@ public class ThreadHelloTest extends Thread{
 	// 	}
 	// }
 
+	@Test
+	public void testRun() {
+			NumberGenerator instance = new NumberGenerator(1000, 2000);
+			for (int j = 0; j < 3; j++) {
+				new ThreadNumber(instance).start();
+			}
+		}
 }
