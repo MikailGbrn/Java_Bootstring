@@ -1,0 +1,9 @@
+SELECT * FROM tb_pegawai;
+
+SELECT * FROM tb_gaji;
+
+SELECT * FROM tb_menu;
+
+SELECT * FROM tb_pembeli;
+
+SELECT * FROM tb_transaksi;

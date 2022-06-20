@@ -1,0 +1,3 @@
+SELECT a.id_pegawai AS "ID", a.nama_pegawai AS "NAMA", a.jabatan AS "JABATAN", b.gaji AS "GAJI" FROM
+tb_pegawai a JOIN tb_gaji b ON a.id_pegawai = b.id_pegawai
+ORDER BY a.id_pegawai ASC;

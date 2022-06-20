@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employees>
+    <employee id = "1011">
+        <firstName>John</firstName>
+        <lastName>Travolta</lastName>
+        <location>Tibet</location>
+    </employee>
+    <employee id = "1012">
+        <firstName>Paul</firstName>
+        <lastName>McCartney</lastName>
+        <location>Merseyside</location>
+    </employee>
+    <employee id = "1013">
+        <firstName>Arsene</firstName>
+        <lastName>Wenger</lastName>
+        <location>North London</location>
+    </employee>
+    <employee id = "1014">
+        <firstName>Christiano</firstName>
+        <lastName>Ronaldo</lastName>
+        <location>Fix Gol</location>
+    </employee>
+</employees>
