@@ -1,4 +1,4 @@
-package com.learning.thread;
+package com.learning.CobaSAX;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

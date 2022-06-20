@@ -1,8 +1,8 @@
-package com.learning.thread;
+package com.learning.CobaSAX;
 
 import java.util.List;
 
-public class JavaReadXmlSaxEx {
+public class JavaReadXmlSaxTest {
     public static void main(String[] args) {
 
         MyRunner runner = new MyRunner();

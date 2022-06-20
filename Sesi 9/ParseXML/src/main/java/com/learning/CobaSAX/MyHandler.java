@@ -1,4 +1,4 @@
-package com.learning.thread;
+package com.learning.CobaSAX;
 
 import java.security.KeyStore.Entry.Attribute;
 import java.util.ArrayList;
@@ -48,13 +48,13 @@ public class MyHandler extends DefaultHandler {
             public void characters(char[] ch, int start, int length) {
                 if (bfn) {
                     user.setName(new String(ch, start, length));
-                    bfn = true;
+                    bfn = false;
                 } else if (bln) {
                     user.setGender(new String(ch, start, length));
-                    bln = true;
+                    bln = false;
                 } else if (boc) {
                     user.setRole(new String(ch, start, length));
-                    boc = true;
+                    boc = false;
                 }
             }
 
