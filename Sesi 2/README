@@ -1,0 +1,33 @@
+--- Sesi 2 ---
+
+=== Menghitung grade ===
+1. Menginisiasi variabel nilai
+2. Menginisiasi scanner
+3. memberikan scanner kepada user untuk menginput nilainya
+4. menentukan grade dari nilai yang di inputkan dengan syntax if dan else if
+
+=== Lampu Merah ===
+1. Menginisasi variabel lampu
+2. menginisiasi Scanner
+3. memberikan syntax scanner kepada user untuk menginput warna
+4. menentukan aksi selanjutnya sesuai dari warna yang diinput menggunakan syntax switch case
+
+=== operasi aritmatika ===
+1. menginisiasi scanner untuk user memasukkan 2 buah angka
+2. memproses angka tersebut dan menampilkan hasil dari proses tersebut.
+
+=== operasi kondisional ===
+1. menginisiasi variabel a dan b dengan input nilai 10 dan 15
+2. membandingkan tiap syntax kondisional (<, >, |, &, >>, <<, dan >>>)
+3. menampilkan boolean yang keluar dari hasil perbandingan
+
+=== operasi tenary ===
+1. menginisiasi variabel 'suka' dengan isi dari variabel berupa integer 10.
+2. menjalankan operasi tenary
+3. menampilkan boolean dari tenary
+
+=== program sederhana ===
+1. inisiasi variabel integer dengan nama variabel 'jawaban'
+2. inisiasi scanner 
+3. menampilkan string dari sistem yang menanyakan kebutuhan user
+4. mengembalikan feedback kepada user sesuai dengan apa yang user input

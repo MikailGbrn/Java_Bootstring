@@ -1,0 +1,17 @@
+==== sesi 8 Maven MultiThreading ====
+Pada sesi ini akan dilakukan coding untuk membuat sistem thread dan multithreading. tapi sebelum 
+melakukannya, kita akan melakukan konfigurasi maven for java terlebih dahulu.
+
+=== Konfigurasi MAVEN ====
+1. membuat project maven di folder Sesi 8 dengan command prompt
+2. melakukan run dengan command "mvn archetype:generate -DgroupId=com.learning.thread -DartifactId=DemoThread -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false"
+3. melakukan setting pom.xml dari extension maven yang sudah diinstall sebelumnya
+4. memasukkan setting depedencies di dalam pom.xml berupa hamcrest-one versi 1.3 dan junit versi 4.13
+5. menginstall junit melalui IDE eclipse 
+6. memasukkan setting compiler java 17 di dalam pom.xml
+
+=== Membuat multithreading ===
+1. membuat class Threadhello yang implements ke Runnable
+2. membuat class ThreadTest yang digunakan untuk melakukan test run dari method Threadhello
+3. menjalankan maven clean dan maven install sebelum menjalankan maven test
+4. menjalankan maven test untuk menjalankan run yang telah dibuat

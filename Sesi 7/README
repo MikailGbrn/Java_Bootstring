@@ -1,0 +1,17 @@
+==== Sesi 7 ====
+
+--- Binary ----
+melakukan pencarian angka menggunakan algoritma binary.
+pencarian angka tersebut dilakukan dengan cara mencari nilai tengah
+dari list yang sudah di inisiasi atau dibuat oleh user.
+jika angka yang dicari lebih besar daripada nilai tengah, maka sistem akan memangkas 
+list dari tengah ke atas, begitu juga sebaliknya hingga angka yang dicari ketemu.
+
+--- cara kerja ---
+1. melakukan inisiasi array untuk membuat list angka
+2. user input angka yang ingin dicari
+3. sistem akan mencari nilai tengah dari list tersebut
+4. melakukan pencarian menggunakan syntax while dan if else
+5. jika nilai yang dicari lebih kecil daripada nilai tengah, maka angka dari urutan pertama hingga ke tengah akan di potong
+6. jika nilai yang dicari lebih besar daripada nilai tengah, maka angka dari urutan tengah ke yang paling akhir akan dipotong
+7. iterasi terus dilakukan hingga angka yang dicari ketemu.

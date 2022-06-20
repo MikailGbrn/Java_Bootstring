@@ -1,2 +1,23 @@
 === Sesi 6 ===
 
+dalam sesi ini akan dilakukan pendaftaran GitHub dan melakukan install Git Bash untuk
+file codingan agar dapat disimpan di cloud
+
+=== Cara Menggunakan Git ===
+1. Daftar Akun github terlebih dahulu
+2. verifikasi email dan setting profile
+3. download git bash sebagai third party software
+4. install git bash sesuai instruksi
+5. configurasi git bash menggunakan command prompt
+
+
+=== Konfigurasi Git Bash ===
+1. git init
+2. git remote add origin url
+3. git commit -m "first commit"
+4. git checkout -b main
+5. git push -u origin main
+
+=== pull git pertama kali ===
+1. git pull origin branchname --allow-unrelated-histories
+

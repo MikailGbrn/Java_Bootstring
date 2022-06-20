@@ -1,0 +1,30 @@
+=== Sesi 4 ===
+
+Sesi ini akan membahas tentang Array, Array Multidimensi, cara kerja array, node dan binary tree.
+
+=== Array For Each ===
+1. menginisiasi string array dengan nama variabel profesi dan panjang array 5.
+2. menginisiasi scanner untuk user mengisi array sebanyak 5 kali menggunakan syntax For
+3. menampilkan seluruh isi dari array
+
+=== Array Multidimensi ===
+1. mengisi array 2 dimensi dengan nama negara dan klub bola;
+2. menginisiasi syntax for untuk menampilkan isi array
+3. menampilkan isi array dengan for
+
+=== cara kerja array ===
+1. menginisiasi array dan mengisi array tersebut
+2. menampilkan array dengan memanggil index array
+3. menampilkan array dengan syntax for
+
+=== Binary Tree ===
+1. membuat class tree
+2. di dalam class tree membuat method Insert
+3. di dalam method insert memasukkan input user serta menentukan posisi integer tersebut 
+sesuai dengan kaidah binary tree
+4. di dalam class tree membuat method view yang berguna untuk memanggil urutan angka yang sudah dimasukkan
+user dan di atur oleh Sistem 
+5. di dalam class tree membuat method postOrder, preOrder, dan inOrder untuk melakukan
+pengurutan angka yang dimasukkan oleh user
+6. membuat class Node
+7. di dalam class Node, dibuat method untuk menjalankan method yang dibuat di class Tree

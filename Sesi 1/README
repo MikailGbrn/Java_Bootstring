@@ -1,0 +1,13 @@
+=== Sesi 1 ===
+Melakukan inisiasi java dengan membuat code untuk menampilkan String helloworld. Pada sesi ini juga
+dilakukan percobaan code dari berbagai method diantaranya:
+1. System out Print
+2. Switch case
+3. List
+4. Linked List
+5. dan variasi Switch Case.
+
+----- Cara Kerja -----
+1. Inisaisi java menggunakan jdk 17
+2. menjalankan IDE Visual Studio Code untuk melakukan coding java
+3. membuat coding sesuai dengan method yang ada di sesi 1

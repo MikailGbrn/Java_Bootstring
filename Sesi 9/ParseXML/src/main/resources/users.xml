@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id = "1">
+        <id>26</id>
+        <name>Brian</name>
+        <gender>Male</gender>
+        <role>Java Developer</role>
+    </user>
+    <user id = "2">
+        <id>26</id>
+        <name>Lisa</name>
+        <gender>Female</gender>
+        <role>CEO</role>
+    </user>
+    <user id = "3">
+        <id>35</id>
+        <name>Kobe</name>
+        <gender>Male</gender>
+        <role>Tim Hore</role>
+    </user>
+    <user id = "4">
+        <id>40</id>
+        <name>Nami</name>
+        <gender>Female</gender>
+        <role>Navigator</role>
+    </user>
+</users>
