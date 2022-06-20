@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user id="100">
+        <firstname>Bruce</firstname>
+        <lastname>Wayne</lastname>
+    </user>
+    <user id="101">
+        <firstname>Luke</firstname>
+        <lastname>Skywalker</lastname>
+    </user>
+    <user id="102">
+        <firstname>Darth</firstname>
+        <lastname>Vader</lastname>
+    </user>
+</users>
