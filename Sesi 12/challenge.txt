@@ -1,0 +1,93 @@
+1.  Tampilkan dependent_name dan relationship dengan employee yang namanya diawali huruf M ? 
+
+SELECT b.Dependent_Name, b.Relationship FROM dependent b JOIN
+tb_employee a ON a.SSN = b.ESSN WHERE
+a.FName LIKE 'M%';
+
+2. Banyaknya employee yang mengerjakan project PNum = 1 ?
+
+SELECT COUNT(a.SSN) FROM tb_employee a JOIN
+works_on b ON a.SSN = b.ESSN WHERE
+b.PNumber = '3001';
+
+3. Banyaknya employee yang memiliki salary lebih dari 3500000 ? 
+
+SELECT COUNT(SSN) FROM tb_employee WHERE
+salary > 10000000;
+
+4. Banyaknya project yang dikerjakan DNum =2 ?
+
+SELECT COUNT(PNumber) FROM project b JOIN
+tb_dept a ON b.DNum = a.DNum WHERE
+a.DNum = 2001;
+
+5. Hitung total dan rata-rata salary dari setiap departemen ?
+
+SELECT b.DName as 'Nama Departemen', AVG(a.salary) as 'Rata-Rata Gaji' FROM tb_employee a JOIN
+tb_dept b ON a.DNum = b.DNum
+GROUP BY b.DNum;
+
+6. Banyaknya employee dari setiap department dan urutkan berdasarkan employee terbanyak ?
+
+SELECT b.DName as 'Nama Departemen', COUNT(a.SSN) as 'Banyak Employee'FROM tb_employee a JOIN
+tb_dept b on a.DNum = b.DNum
+GROUP BY b.DNum;
+
+7. Total hours perweek dari semua employee untuk setiap project ?
+
+SELECT a.PName as 'Nama Project', SUM(b.Hours) as 'Total Jam Per Minggu' FROM works_on b JOIN
+project a ON a.PNumber = b.PNumber
+GROUP BY b.PNumber;
+
+
+8. Employee yang memiliki total hours perweek lebih besar dari 140 hours dan urutkan berdasarkan jumlah jam kerja terbanyak? 
+
+SELECT a.FName as 'Nama Karyawan', SUM(b.Hours) as 'Total Waktu Kerja' FROM tb_employee a JOIN
+works_on b ON a.SSN = b.ESSN
+GROUP BY b.ESSN
+HAVING SUM(b.Hours) > 500
+ORDER BY SUM(b.Hours) DESC;
+
+9. Kelompokkan bonus employee berdasarkan jumlah jam kerjanya ? (Jika >= 200 hours, maka bonus = 50%; Jika >= 150 hours, maka bonus = 25%, Selainnya bonus = 10%) 
+
+SELECT a.FName as 'Nama Karyawan', SUM(b.Hours) as 'Total Waktu Kerja',
+CASE
+WHEN SUM(b.Hours) > 1000 THEN 'Bonus 50%'
+WHEN SUM(b.Hours) > 400 THEN 'Bonus 25%'
+ELSE 'Bonus 10%'
+END AS 'BONUS'
+FROM tb_employee a JOIN
+works_on b ON a.SSN = b.ESSN
+GROUP BY b.ESSN
+ORDER BY SUM(b.Hours) DESC;
+
+10. Banyaknya project yang dikerjakan tiap employee dan urutkan dari yang terbanyak ?
+
+SELECT a.FName as 'Nama Karyawan', COUNT(b.PNumber) as 'Jumlah Project'
+FROM tb_employee a JOIN works_on b
+ON a.SSN = b.ESSN
+GROUP BY a.SSN
+ORDER BY COUNT(b.PNumber) DESC;
+
+11. Employee yang bekerja pada 4 project ?
+SELECT a.FName as 'Nama Karyawan', COUNT(b.PNumber) as 'Jumlah Project'
+FROM tb_employee a JOIN works_on b
+ON a.SSN = b.ESSN
+GROUP BY a.SSN
+HAVING COUNT(b.PNumber) >= 2
+ORDER BY COUNT(b.PNumber) DESC;
+
+12. Employee yang memiliki rata-rata hours perweek = 70 jam dan bekerja pada 2 project ?
+SELECT a.FName AS 'Nama Karyawan', AVG(Hours) AS 'Rata-rata Jam Kerja'
+FROM tb_employee a JOIN works_on b
+ON a.SSN = b.ESSN
+GROUP BY a.SSN
+HAVING AVG(Hours) > 200 AND COUNT(b.PNumber) = 2;
+
+13. Banyaknya Dependent berdasarkan relationship dengan employee ?
+SELECT b.Relationship, COUNT(b.Relationship) AS 'Banyaknya Dependant'
+FROM tb_employee a JOIN dependent b
+ON a.SSN = b.ESSN
+GROUP BY b.Relationship
+
+14.  Lokasi project yang menjadi tempat lebih dari satu department?
