@@ -45,11 +45,11 @@ public class User {
     public String toString() {
         StringBuilder build = new StringBuilder();
         build.append("user{").append("id=").append(id)
-        .append("name=").append(name)
-        .append("gender=").append(gender)
-        .append("role=").append(role).append("}");
+                .append("name=").append(name)
+                .append("gender=").append(gender)
+                .append("role=").append(role).append("}");
 
         return build.toString();
     }
-    
+
 }

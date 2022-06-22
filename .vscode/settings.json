@@ -2,5 +2,6 @@
     "java.project.sourcePaths": [
         "Sesi 2",
         "Sesi 1"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
