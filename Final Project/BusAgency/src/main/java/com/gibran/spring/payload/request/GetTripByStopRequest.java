@@ -20,4 +20,12 @@ public class GetTripByStopRequest {
 	public void setDestStopId(Long destStopId) {
 		this.destStopId = destStopId;
 	}
+
+	public GetTripByStopRequest(Long sourceStopid, Long destStopId) {
+		super();
+		this.sourceStopid = sourceStopid;
+		this.destStopId = destStopId;
+	}
+	
+	
 }
