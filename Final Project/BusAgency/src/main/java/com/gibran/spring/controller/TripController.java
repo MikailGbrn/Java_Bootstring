@@ -43,7 +43,7 @@ public class TripController {
 	
 	@GetMapping("/")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN','USER')")
 	public ResponseEntity<?> getAll() {
 		List<TripRequest> dataArrResult = new ArrayList<>();
 		for (Trip dataArr : tripRepository.findAll()) {
@@ -93,7 +93,7 @@ public class TripController {
 
 	@GetMapping("/{id}")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN','USER')")
 	public ResponseEntity<?> getTripByAgencyId(@PathVariable(value = "id") Long id) {
 		List<Trip> trip = tripRepository.findByAgencyId(id);
 		return ResponseEntity.ok(trip);

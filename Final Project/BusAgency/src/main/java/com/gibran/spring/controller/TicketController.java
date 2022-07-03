@@ -1,4 +1,4 @@
-package com.gibran.spring.controller;
+	package com.gibran.spring.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +58,7 @@ public class TicketController {
 	
 	@GetMapping("/{id}")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN', 'USER')")
+	@PreAuthorize("hasAnyRole('ADMIN','USER')")
 	public ResponseEntity<?> getTicketById(@PathVariable(value = "id") Long id) {
 		Ticket ticket = ticketRepository.findById(id).get();
 		if (ticket == null) {
@@ -72,14 +72,14 @@ public class TicketController {
 	
 	@PostMapping("/")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN', 'USER')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> beliTiket(@Valid @RequestBody TicketRequest ticketRequest) {
 		User user = userRepository.findById(ticketRequest.getPassegerId()).get();
 		TripSchedule tripSchedule = tripScheduleRepository.findById(ticketRequest.getTripScheduleId()).get();
 		Ticket ticket = new Ticket(ticketRequest.getSeatNumber(), ticketRequest.getCancellable(),
 				ticketRequest.getJourneyDate(), user, tripSchedule);
-		return ResponseEntity.ok(new MessageResponse<Ticket>(true,
-				"Success Adding Data", ticketRepository.save(ticket)));
+		ticketRepository.save(ticket);
+		return ResponseEntity.ok(new MessageResponse<Ticket>(true,"Success Adding Data"));
 	}
 	
 	@PutMapping("/{id}")
@@ -101,7 +101,7 @@ public class TicketController {
 
 		Ticket gantiTiket = ticketRepository.save(ticket);
 
-		return ResponseEntity.ok(new MessageResponse<Ticket>(true, "Success Updating Data", gantiTiket));
+		return ResponseEntity.ok(new MessageResponse<Ticket>(true, "Success Updating Data"));
 	}
 	
 	@DeleteMapping("/{id}")

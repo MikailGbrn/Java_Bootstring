@@ -45,7 +45,7 @@ public class AgencyController {
 
 	@GetMapping("/")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> getAll() {
 		List<AgencyRequest> dataArrResult = new ArrayList<>();
 		for (Agency dataArr : agencyRepository.findAll()) {
@@ -57,7 +57,7 @@ public class AgencyController {
 
 	@GetMapping("/{id}")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN','USER')")
 	public ResponseEntity<?> getAgencyById(@PathVariable(value = "id") Long id) {
 		Agency agency = agencyRepository.findById(id).get();
 		if (agency == null) {
@@ -75,8 +75,7 @@ public class AgencyController {
 	public ResponseEntity<?> addAgency(@Valid @RequestBody AgencyRequest agencyRequest) {
 		User user = userRepository.findById(agencyRequest.getOwner()).get();
 		Agency agency = new Agency(agencyRequest.getCode(), agencyRequest.getDetails(), agencyRequest.getName(), user);
-		return ResponseEntity
-				.ok(new MessageResponse<Agency>(true, "Success Adding Data", agencyRepository.save(agency)));
+		return ResponseEntity.ok(new MessageResponse<Agency>(true, "Success Adding Data", agencyRepository.save(agency)));
 	}
 
 	@PutMapping("/{id}")

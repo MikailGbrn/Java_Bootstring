@@ -16,7 +16,7 @@ public class BusRequest {
 	
 	private String make;
 	
-	@ApiModelProperty(hidden = true)
+	@ApiModelProperty
 	private long agencyId;
 	
 	public BusRequest() {

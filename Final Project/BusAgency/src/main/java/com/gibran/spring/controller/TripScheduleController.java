@@ -45,7 +45,7 @@ public class TripScheduleController {
 	
 	@GetMapping("/")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> getAll() {
 		List<GetTripScheduleRequest> dataArrResult = new ArrayList<>();
 		for (TripSchedule dataArr : tripScheduleRepository.findAll()) {
@@ -57,7 +57,7 @@ public class TripScheduleController {
 	
 	@GetMapping("/{id}")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
-	@PreAuthorize("hasRole('ADMIN', 'USER')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> getTripScheduleById(@PathVariable(value = "id") Long id) {
 		TripSchedule tripschedule = tripScheduleRepository.findById(id).get();
 		if (tripschedule == null) {
