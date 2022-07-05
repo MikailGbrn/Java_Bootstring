@@ -27,17 +27,61 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/user/signup",
+									"raw": "http://localhost:8088/api/v1/user/signup",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
 										"user",
 										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJIVG9sbGUiLCJpYXQiOjE2NTcwMjI2NTQsImV4cCI6MTY1NzEwOTA1NH0.7UyL60nTZXRnmb9_j454hOyf-TIXSkXlASMwSeFIz5M7i9BdqpCqgizjQV11ITa9In4cgR_G2YqqwwIJO1irkA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"PLG\",\r\n  \"details\": \"Palembang\",\r\n  \"email\": \"Yudas@gmail.com\",\r\n  \"firstName\": \"Yudas\",\r\n  \"lastName\": \"Lugas\",\r\n  \"mobileNumber\": \"087612341234\",\r\n  \"name\": \"Yugas Lugas\",\r\n  \"password\": \"root123\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"YLugas\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/api/v1/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
 									]
 								}
 							},
@@ -58,12 +102,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/user/1",
+									"raw": "http://localhost:8088/api/v1/user/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -89,12 +133,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/user/password/1",
+									"raw": "http://localhost:8088/api/v1/user/password/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -136,12 +180,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/auth",
+									"raw": "http://localhost:8088/api/auth",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"auth"
@@ -171,12 +215,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/agency/",
+									"raw": "http://localhost:8088/api/v1/agency/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -210,12 +254,12 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/agency/4",
+									"raw": "http://localhost:8088/api/v1/agency/4",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -251,12 +295,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/agency/",
+									"raw": "http://localhost:8088/api/v1/agency/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -282,12 +326,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/agency/1",
+									"raw": "http://localhost:8088/api/v1/agency/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -314,12 +358,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/agency/7",
+									"raw": "http://localhost:8088/api/v1/agency/7",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -351,12 +395,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/bus/",
+									"raw": "http://localhost:8088/api/v1/bus/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -373,12 +417,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/bus/1",
+									"raw": "http://localhost:8088/api/v1/bus/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -404,12 +448,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/bus/1",
+									"raw": "http://localhost:8088/api/v1/bus/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -430,12 +474,12 @@
 									"raw": "{\r\n  \"capacity\": 30,\r\n  \"code\": \"PKL-TGR\",\r\n  \"make\": \"30\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/bus/1",
+									"raw": "http://localhost:8088/api/v1/bus/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -452,12 +496,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/bus/1",
+									"raw": "http://localhost:8088/api/v1/bus/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -479,12 +523,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/stop/",
+									"raw": "http://localhost:8088/api/v1/stop/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -513,12 +557,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/stop/1",
+									"raw": "http://localhost:8088/api/v1/stop/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -544,12 +588,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/stop/",
+									"raw": "http://localhost:8088/api/v1/stop/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -566,12 +610,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/stop/1",
+									"raw": "http://localhost:8088/api/v1/stop/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -603,12 +647,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/ticket/",
+									"raw": "http://localhost:8088/api/v1/ticket/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -625,12 +669,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/ticket/1",
+									"raw": "http://localhost:8088/api/v1/ticket/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -666,12 +710,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/ticket/",
+									"raw": "http://localhost:8088/api/v1/ticket/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -697,12 +741,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/ticket/1",
+									"raw": "http://localhost:8088/api/v1/ticket/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -719,12 +763,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/ticket/1",
+									"raw": "http://localhost:8088/api/v1/ticket/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -756,12 +800,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip/",
+									"raw": "http://localhost:8088/api/v1/trip/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -788,12 +832,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip/1",
+									"raw": "http://localhost:8088/api/v1/trip/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -819,12 +863,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip/",
+									"raw": "http://localhost:8088/api/v1/trip/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -845,12 +889,12 @@
 									"raw": "{\r\n  \"agencyId\": 1,\r\n  \"busId\": 7,\r\n  \"destStopId\": 1,\r\n  \"fare\": 70000,\r\n  \"journeyTime\": 1020,\r\n  \"sourceStopId\": 5\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip/1",
+									"raw": "http://localhost:8088/api/v1/trip/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -867,12 +911,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip/2",
+									"raw": "http://localhost:8088/api/v1/trip/2",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -894,12 +938,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/tripschedule/",
+									"raw": "http://localhost:8088/api/v1/tripschedule/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -916,12 +960,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/tripschedule/1",
+									"raw": "http://localhost:8088/api/v1/tripschedule/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -947,12 +991,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/tripschedule/",
+									"raw": "http://localhost:8088/api/v1/tripschedule/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -978,12 +1022,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/v1/tripschedule/",
+									"raw": "http://localhost:8088/api/v1/tripschedule/",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
@@ -1000,12 +1044,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/api/v1/trip_schedule/1",
+									"raw": "http://localhost:8088/api/v1/trip_schedule/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8088",
 									"path": [
 										"api",
 										"v1",
