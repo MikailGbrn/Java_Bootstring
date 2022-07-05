@@ -1,6 +1,8 @@
 package com.gibran.spring.controller;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.Valid;
@@ -22,6 +24,7 @@ import com.gibran.spring.model.Agency;
 import com.gibran.spring.model.ERole;
 import com.gibran.spring.model.Role;
 import com.gibran.spring.model.User;
+import com.gibran.spring.payload.request.AgencyRequest;
 import com.gibran.spring.payload.request.SignupCustomRequest;
 import com.gibran.spring.payload.request.UserCustomRequest;
 import com.gibran.spring.payload.request.UserPasswordRequest;
@@ -32,6 +35,7 @@ import com.gibran.spring.repository.UserRepository;
 import com.gibran.spring.security.jwt.JwtUtils;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
@@ -58,6 +62,30 @@ public class UserController {
 
 	@Autowired
 	JwtUtils jwtUtils;
+	
+	@GetMapping("/")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> getAll() {
+		List<UserCustomRequest> dataArrResult = new ArrayList<>();
+		for (User dataArr : userRepository.findAll()) {
+			dataArrResult.add(new UserCustomRequest(dataArr.getFirstName(), dataArr.getLastName(), dataArr.getMobileNumber()));
+		}
+		return ResponseEntity.ok(new MessageResponse<UserCustomRequest>(true, "Success Retrieving Data", dataArrResult));
+	}
+	
+	@GetMapping("/{id}")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> getUserById(@PathVariable(value = "id") Long id) {
+		User user = userRepository.findById(id).get();
+		if (user == null) {
+			return ResponseEntity.notFound().build();
+		} else {
+			UserCustomRequest dataResult = new UserCustomRequest(user.getFirstName(), user.getLastName(), user.getMobileNumber());
+			return ResponseEntity.ok(new MessageResponse<UserCustomRequest>(true, "Success Retrieving Data", dataResult));
+		}
+	}
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupCustomRequest signupCustomRequest) {
