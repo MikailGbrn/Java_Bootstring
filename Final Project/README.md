@@ -54,6 +54,25 @@ Mengubah data password pada user
 | `id`      | `integer` | **Required**. Id of item to fetch |
 | `password` | `string` |
 
+#### Get All User
+
+Menampilkan seluruh data user
+
+```http
+  PUT /api/v1/user/
+```
+
+#### Get User by Id
+
+Menampilkan data user sesuai dengan id yang diinputkan
+
+```http
+  PUT /api/v1/user/{id}
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `integer` | **Required**. Id of item to fetch |
+
 ### AUTH
 Untuk user atau admin melakukan admin dan sistem menentukan apakah credentials yang dimasukkan oleh user atau admin sudah benar atau belum
 
